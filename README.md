@@ -3,9 +3,9 @@ Repository for PSQL reference.
 
 ## Write a function to create "employee_data" table 
 
-**Schema name:** study
-**Function name:** func_sample_employee_table
-**Table name:** employee_data
+**Schema name:** study  
+**Function name:** func_sample_employee_table  
+**Table name:** employee_data  
 
 Columns given below,  
 
