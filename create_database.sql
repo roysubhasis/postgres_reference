@@ -5,8 +5,8 @@
 -- 1) Create database owned by the administrative user
 CREATE DATABASE study_db OWNER "usr.adm.001"
     ENCODING 'UTF8'
-    LC_COLLATE = 'en_GB.UTF-8'
-    LC_CTYPE = 'en_GB.UTF-8'
+    LC_COLLATE = 'en_GB.UTF-8' -- optional
+    LC_CTYPE = 'en_GB.UTF-8'   -- optional
     CONNECTION LIMIT = -1;
 
 -- 2) Allow the application roles to connect to the database
@@ -55,6 +55,8 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "usr.adm.001" IN SCHEMA public
 -- GRANT SELECT ON ALL TABLES IN SCHEMA public TO "app.ro.role";
 -- GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO "app.core.role";
 -- GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO "app.core.role";
+
+ALTER DATABASE study_db SET idle_in_transaction_session_timeout='0';
 
 -- End of create_database.sql
 
